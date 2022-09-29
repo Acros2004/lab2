@@ -334,8 +334,12 @@ namespace Lab2
             abThird.MiddleName = "Vladimirovich";
             abThird.Print();
             Console.WriteLine($"Сравнение {abSecond.ID} с {abThird.ID}(с изменениями):\t{abSecond.Equals(abThird)}");
-
-
+            Gun myGun = new Gun();
+            myGun.Shoot();
+            myGun.Reload();
+            myGun.Reload();
+            myGun.Shoot();
+            myGun.Shoot();
         }
     }
 }
