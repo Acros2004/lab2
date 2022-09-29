@@ -81,11 +81,12 @@ namespace Lab2
                 }
                 return true;
             }
-            public void addCount(ref int a)
+            public static void AddCount(ref int a, out int b)
             {
+                b = 10;
                 a++;
             }
-            public static void showCount()
+            public static void ShowCount()
             {
                 Console.WriteLine($"Количество созданных объектов составляет {count}");
             }
@@ -120,6 +121,7 @@ namespace Lab2
             private long? _number;
             private int[] _marks;
             public static int count = 0;
+            public static int primer = 0;
             public readonly string info = "приватный конструктор";
             public const string constStr = "Indefined";
             public int _max;
@@ -231,8 +233,8 @@ namespace Lab2
                 _average = GetAverage(_marks);
                 _min = GetMin(_marks);
                 _max = GetMax(_marks);
-                addCount(ref count);
-                showCount();
+                AddCount(ref count, out primer);
+                ShowCount();
             }
             public Abiturient(string name, string surname, string middlename, string adress, long number, int[] marks)
             {
@@ -246,8 +248,8 @@ namespace Lab2
                 _average = GetAverage(_marks);
                 _min = GetMin(_marks);
                 _max = GetMax(_marks);
-                addCount(ref count);
-                showCount();
+                AddCount(ref count, out primer);
+                ShowCount();
             }
             public Abiturient(long number, int[] marks)
             {
@@ -261,8 +263,8 @@ namespace Lab2
                 _average = GetAverage(_marks);
                 _min = GetMin(_marks);
                 _max = GetMax(_marks);
-                addCount(ref count);
-                showCount();
+                AddCount(ref count, out primer);
+                ShowCount();
             }
             public Abiturient(string name, long number, int[] marks)
             {
@@ -276,8 +278,8 @@ namespace Lab2
                 _average = GetAverage(_marks);
                 _min = GetMin(_marks);
                 _max = GetMax(_marks);
-                addCount(ref count);
-                showCount();
+                AddCount(ref count, out primer);
+                ShowCount();
             }
             static Abiturient()
             {
