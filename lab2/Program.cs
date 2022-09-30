@@ -57,6 +57,10 @@ namespace Lab2
                 }
                 return max;
             }
+            public override string ToString()
+            {
+                return _surname;
+            }
             public override bool Equals(object? input)
             {
                 if (input is Abiturient && input != null)
@@ -334,6 +338,7 @@ namespace Lab2
             abThird.MiddleName = "Vladimirovich";
             abThird.Print();
             Console.WriteLine($"Сравнение {abSecond.ID} с {abThird.ID}(с изменениями):\t{abSecond.Equals(abThird)}");
+            Console.WriteLine($"Вызвал метод ToString  {abFirst.ToString()}");
             Gun myGun = new Gun();
             myGun.Shoot();
             myGun.Reload();
